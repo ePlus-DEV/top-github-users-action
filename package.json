@@ -9,26 +9,26 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gayanvoice/top-github-users-action.git"
+    "url": "git+https://github.com/ePlus-DEV/top-github-users-action.git"
   },
   "keywords": [
     "GitHub",
     "Actions",
     "JavaScript"
   ],
-  "author": "Gayan Kuruppu",
+  "author": "David Nguyen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gayanvoice/top-github-users-action/issues"
+    "url": "https://github.com/ePlus-DEV/top-github-users-action/issues"
   },
-  "homepage": "https://github.com/gayanvoice/top-github-users-action#readme",
+  "homepage": "https://github.com/ePlus-DEV/top-github-users-action#readme",
   "dependencies": {
     "@octokit/graphql": "4.6.2",
     "fs-extra": "9.1.0",
     "simple-git": "2.39.0"
   },
   "devDependencies": {
-    "@vercel/ncc": "0.27.0",
+    "@vercel/ncc": "0.38.1",
     "jest": "26.6.3"
   }
 }

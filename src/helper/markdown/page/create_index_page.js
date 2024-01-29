@@ -42,17 +42,17 @@ let createIndexPage = (function () {
     }
     let create = function (githubUsernameAndRepository, readConfigResponseModel) {
         let markdown = headerComponent.create();
-        markdown = markdown + `<a href="https://gayanvoice.github.io/top-github-users/index.html">\n`;
-        markdown = markdown + `\t<img align="right" width="400" src="https://github.com/gayanvoice/top-github-users-monitor/raw/master/public/images/banner/top-github-users-map.png" alt="top-github-users-by-country">\n`;
+        markdown = markdown + `<a href="https://top-github-users.eplus.dev">\n`;
+        markdown = markdown + `\t<img align="right" width="400" src="https://github.com/ePlus.DEV/top-github-users-monitor/raw/master/public/images/banner/top-github-users-map.png" alt="top-github-users-by-country">\n`;
         markdown = markdown + `</a>\n\n`;
         markdown = markdown + `List of most active GitHub users based on \`public contributions\` \`private contributions\` and \`number of followers\`  by country or state. `;
         markdown = markdown + `The list updated \`${formatMarkdown.getDate()}\`.\n\n`;
         markdown = markdown + `This repository contains users \`${readConfigResponseModel.locations.length} countries\` and \`${formatMarkdown.getNumberOfCities(readConfigResponseModel)} cities\`. \n`;
         markdown = markdown + `To get into the list you need to have minimum number of followers that varies in each country. `;
         markdown = markdown + `The list can be found in [config.json](https://github.com/${githubUsernameAndRepository}/blob/main/config.json).\n\n`;
-        markdown = markdown + `Contribute to GitHub action [gayanvoice/top-github-users-action](https://github.com/gayanvoice/top-github-users-action). `;
-        markdown = markdown + `The project maintained by [gayanvoice](https://github.com/gayanvoice). `
-        markdown = markdown + `Don't forget to follow him on [GitHub](https://github.com/gayanvoice), [Twitter](https://twitter.com/gayanvoice), and [Medium](https://gayanvoice.medium.com/).\n\n`;
+        markdown = markdown + `Contribute to GitHub action [ePlus.DEV/top-github-users-action](https://github.com/ePlus.DEV/top-github-users-action). `;
+        markdown = markdown + `The project maintained by [ePlus.DEV](https://github.com/ePlus.DEV). `
+        markdown = markdown + `Don't forget to follow him on [GitHub](https://github.com/ePlus.DEV), [Twitter](https://twitter.com/david), and [Website](https://eplus.dev/).\n\n`;
         markdown = markdown + starComponent.create();
         markdown = markdown + `### 🚀 Share on\n\n`;
         markdown = markdown + socialMediaComponent.create(
