@@ -33,6 +33,7 @@ let formatMarkdown = function () {
         } else {
             company = company.replace(/[{}]/g, '');
             company = company.replace(/<[^>]*>/g, '');
+            company = company.replace(/[^\w\s]/gi, ''); // Remove special characters
             return breakWords(company, 4);
         }
     }
