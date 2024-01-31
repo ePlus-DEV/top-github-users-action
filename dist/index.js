@@ -15002,7 +15002,7 @@ let outputMarkdown = (function () {
     let saveIndexMarkdownFile = async function (markdown) {
         let indexPath = setIndexPath();
         await markdownFile.outputMarkdownFile(indexPath, markdown);
-        let docsPath = path.join('docs', indexPath);
+        let docsPath = path.join('docs', 'index.md');
         await fs.copy(indexPath, docsPath);
     }
     let savePublicContributionsMarkdownFile = async function (country, markdown) {
