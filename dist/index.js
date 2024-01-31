@@ -14902,9 +14902,7 @@ let formatMarkdown = function () {
         if (company === 'undefined value') {
             return `No Company`;
         } else {
-            company = company.replace(/[{}]/g, '');
-            company = company.replace(/<[^>]*>/g, '');
-            company = company.replace(/[^\w\s]/gi, ''); // Remove special characters
+            company = company.replace(/[^@a-zA-Z0-9\s]/g, '');
             return breakWords(company, 4);
         }
     }
@@ -14919,9 +14917,6 @@ let formatMarkdown = function () {
         if(twitterUsername === 'undefined value'){
             return `No Twitter Username`;
         } else {
-            twitterUsername = twitterUsername.replace(/[{}]/g, '');
-            twitterUsername = twitterUsername.replace(/<[^>]*>/g, '');
-            twitterUsername = twitterUsername.replace(/[^\w\s]/gi, ''); // Remove special characters
             return `<a href="https://twitter.com/${twitterUsername}">${twitterUsername}</a>`
         }
     }
