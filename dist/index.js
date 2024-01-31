@@ -14536,7 +14536,7 @@ let createHtmlFile = (function () {
         html = html + `\t<div class="footer">\n`;
         html = html + `\t\t<div class="description">\n`;
         html = html + `\t\t\tList of most active GitHub users based on public contributions by country.\n`;
-        html = html + `\t\t\tGo to repository <a href="https://github.com/ePlus-DEV/top-github-users">/ePlus-DEV/top-github-users</a>\n`;
+        html = html + `\t\t\tGo to repository <a target="_blank" href="https://github.com/ePlus-DEV/top-github-users">/ePlus-DEV/top-github-users</a>\n`;
         html = html + `\t\t</div>\n`;
         html = html + `\t</div>\n`;
         html = html + `\t<script type="application/javascript">\n`;
@@ -15090,7 +15090,7 @@ let createFollowersPage = (function () {
     let create = function (outputMarkdownModel) {
         let country = formatMarkdown.capitalizeTheFirstLetterOfEachWord(outputMarkdownModel.locationDataModel.country);
         let markdown = headerComponent.create(`Followers`, country);
-        markdown = markdown + `<a href="https://top-github-users.eplus.dev">\n`;
+        markdown = markdown + `<a target="_blank" href="https://top-github-users.eplus.dev">\n`;
         markdown = markdown + `\t<img align="right" width="200" src="${outputMarkdownModel.locationDataModel.imageUrl}" alt="${country}"/>\n`;
         markdown = markdown + `</a>\n\n`;
         markdown = markdown + `The \`number of followers\` of users in ${country} on \`${formatMarkdown.getDate()}\`. `;
@@ -15172,7 +15172,7 @@ let createIndexPage = (function () {
     }
     let create = function (githubUsernameAndRepository, readConfigResponseModel) {
         let markdown = headerComponent.create();
-        markdown = markdown + `<a href="https://top-github-users.eplus.dev">\n`;
+        markdown = markdown + `<a target="_blank" href="https://top-github-users.eplus.dev">\n`;
         markdown = markdown + `\t<img align="right" width="400" src="https://github.com/ePlus-DEV/top-github-users-action/raw/master/public/images/banner/top-github-users-map.png" alt="top-github-users-by-country"/>\n`;
         markdown = markdown + `</a>\n\n`;
         markdown = markdown + `List of most active GitHub users based on \`public contributions\` \`private contributions\` and \`number of followers\`  by country or state. `;
@@ -15261,7 +15261,7 @@ let createPublicContributionsPage = (function () {
     let create = function (outputMarkdownModel) {
         let country = formatMarkdown.capitalizeTheFirstLetterOfEachWord(outputMarkdownModel.locationDataModel.country);
         let markdown = headerComponent.create(`Public Contributions`, country);
-        markdown = markdown + `<a href="https://top-github-users.eplus.dev">\n`;
+        markdown = markdown + `<a target="_blank" href="https://top-github-users.eplus.dev">\n`;
         markdown = markdown + `\t<img align="right" width="200" src="${outputMarkdownModel.locationDataModel.imageUrl}" alt="${country}"/>\n`;
         markdown = markdown + `</a>\n\n`;
         markdown = markdown + `The \`public contributions\` by users in ${country} on \`${formatMarkdown.getDate()}\`. `;
@@ -15350,7 +15350,7 @@ let createTotalContributionsPage = (function () {
     let create = function (outputMarkdownModel) {
         let country = formatMarkdown.capitalizeTheFirstLetterOfEachWord(outputMarkdownModel.locationDataModel.country);
         let markdown = headerComponent.create(`Total Contributions`, country);
-        markdown = markdown + `<a href="https://top-github-users.eplus.dev">\n`;
+        markdown = markdown + `<a target="_blank" href="https://top-github-users.eplus.dev">\n`;
         markdown = markdown + `\t<img align="right" width="200" src="${outputMarkdownModel.locationDataModel.imageUrl}" alt="${country}"/>\n`;
         markdown = markdown + `</a>\n\n`;
         markdown = markdown + `The \`public contributions\` and \`private contributions\` by users in ${country} on \`${formatMarkdown.getDate()}\`. `;

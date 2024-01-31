@@ -47,7 +47,7 @@ let createPublicContributionsPage = (function () {
     let create = function (outputMarkdownModel) {
         let country = formatMarkdown.capitalizeTheFirstLetterOfEachWord(outputMarkdownModel.locationDataModel.country);
         let markdown = headerComponent.create(`Public Contributions`, country);
-        markdown = markdown + `<a href="https://top-github-users.eplus.dev">\n`;
+        markdown = markdown + `<a target="_blank" href="https://top-github-users.eplus.dev">\n`;
         markdown = markdown + `\t<img align="right" width="200" src="${outputMarkdownModel.locationDataModel.imageUrl}" alt="${country}"/>\n`;
         markdown = markdown + `</a>\n\n`;
         markdown = markdown + `The \`public contributions\` by users in ${country} on \`${formatMarkdown.getDate()}\`. `;

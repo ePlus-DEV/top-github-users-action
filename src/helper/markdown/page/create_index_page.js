@@ -42,7 +42,7 @@ let createIndexPage = (function () {
     }
     let create = function (githubUsernameAndRepository, readConfigResponseModel) {
         let markdown = headerComponent.create();
-        markdown = markdown + `<a href="https://top-github-users.eplus.dev">\n`;
+        markdown = markdown + `<a target="_blank" href="https://top-github-users.eplus.dev">\n`;
         markdown = markdown + `\t<img align="right" width="400" src="https://github.com/ePlus-DEV/top-github-users-action/raw/master/public/images/banner/top-github-users-map.png" alt="top-github-users-by-country"/>\n`;
         markdown = markdown + `</a>\n\n`;
         markdown = markdown + `List of most active GitHub users based on \`public contributions\` \`private contributions\` and \`number of followers\`  by country or state. `;
