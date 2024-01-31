@@ -14914,6 +14914,7 @@ let formatMarkdown = function () {
         if(name === 'undefined value'){
             return `No Name`;
         } else {
+            name = name.replace(/[^@a-zA-Z0-9\s]/g, '');
             name = name.replace(/[\n\r]/g, '');
             name = name.replace('<>', '-');
             return name
