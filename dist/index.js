@@ -14536,7 +14536,7 @@ let createHtmlFile = (function () {
         html = html + `\t<div class="footer">\n`;
         html = html + `\t\t<div class="description">\n`;
         html = html + `\t\t\tList of most active GitHub users based on public contributions by country.\n`;
-        html = html + `\t\t\tGo to repository <a href="https://github.com/gayanvoice/top-github-users">gayanvoice/top-github-users</a>\n`;
+        html = html + `\t\t\tGo to repository <a href="https://github.com/ePlus-DEV/top-github-users">/ePlus-DEV/top-github-users</a>\n`;
         html = html + `\t\t</div>\n`;
         html = html + `\t</div>\n`;
         html = html + `\t<script type="application/javascript">\n`;
@@ -14627,17 +14627,17 @@ let headerComponent = function () {
         if (pageTitle === undefined && country === undefined) {
             markdown = markdown + `---\n`;
             markdown = markdown + `title: Top GitHub Users By Country\n`;
-            markdown = markdown + `---\n`;
+            markdown = markdown + `---\n\n`;
             markdown = markdown + `# Top GitHub Users By Country `;
-            markdown = markdown + `[<img alt="Image of insights" src="https://github.com/ePlus-DEV/view-counter/blob/main/graph/749591754/small/week.png" height="24">](https://github.com/ePlus-DEV/view-counter/blob/master/readme/749591754/week.md)\n`
+            markdown = markdown + `[<img alt="Image of insights" src="https://github.com/ePlus-DEV/view-counter/blob/main/graph/749591754/small/week.png" height="24"/>](https://github.com/ePlus-DEV/view-counter/blob/master/readme/749591754/week.md)\n`
             markdown = markdown + `[![Top GitHub Users](https://github.com/ePlus-DEV/top-github-users/actions/workflows/top.yml/badge.svg)](https://github.com/ePlus-DEV/top-github-users/actions/workflows/top.yml) `;
             markdown = markdown + `[![Image of insights](https://github.com/ePlus-DEV/view-counter/blob/main/svg/749591754/badge.svg)](https://github.com/ePlus-DEV/view-counter/blob/master/readme/749591754/week.md)\n\n`;
         } else {
             markdown = markdown + `---\n`;
             markdown = markdown + `title: Top GitHub Users By ${pageTitle} in ${country} \n`;
-            markdown = markdown + `---\n`;
+            markdown = markdown + `---\n\n`;
             markdown = markdown + `# Top GitHub Users By ${pageTitle} in ${country} `;
-            markdown = markdown + `[<img alt="Image of insights" src="https://github.com/ePlus-DEV/view-counter/blob/main/graph/749591754/small/week.png" height="24">](https://github.com/ePlus-DEV/view-counter/blob/master/readme/749591754/week.md)\n`
+            markdown = markdown + `[<img alt="Image of insights" src="https://github.com/ePlus-DEV/view-counter/blob/main/graph/749591754/small/week.png" height="24"/>](https://github.com/ePlus-DEV/view-counter/blob/master/readme/749591754/week.md)\n`
             markdown = markdown + `[![Top GitHub Users](https://github.com/ePlus-DEV/top-github-users/actions/workflows/top.yml/badge.svg)](https://github.com/ePlus-DEV/top-github-users/actions/workflows/top.yml) `;
             markdown = markdown + `[![Image of insights](https://github.com/ePlus-DEV/view-counter/blob/main/svg/749591754/badge.svg)](https://github.com/ePlus-DEV/view-counter/blob/master/readme/749591754/week.md)\n\n`;
         }
@@ -15048,7 +15048,7 @@ let createFollowersPage = (function () {
                     table = table + `\t\t<td>${index}</td>\n`;
                     table = table + `\t\t<td>\n`;
                     table = table + `\t\t\t<a href="https://github.com/${user.login}">\n`;
-                    table = table + `\t\t\t\t<img src="${user.avatarUrl}" width="24" alt="Avatar of ${user.login}"> ${user.login}\n`;
+                    table = table + `\t\t\t\t<img src="${user.avatarUrl}" width="24" alt="Avatar of ${user.login}"/> ${user.login}\n`;
                     table = table + `\t\t\t</a><br/>\n`;
                     table = table + `\t\t\t${formatMarkdown.getName(user.name)}\n`;
                     table = table + `\t\t</td>\n`;
@@ -15067,8 +15067,8 @@ let createFollowersPage = (function () {
     let create = function (outputMarkdownModel) {
         let country = formatMarkdown.capitalizeTheFirstLetterOfEachWord(outputMarkdownModel.locationDataModel.country);
         let markdown = headerComponent.create(`Followers`, country);
-        markdown = markdown + `<a href="https://gayanvoice.github.io/top-github-users/index.html">\n`;
-        markdown = markdown + `\t<img align="right" width="200" src="${outputMarkdownModel.locationDataModel.imageUrl}" alt="${country}">\n`;
+        markdown = markdown + `<a href="https://top-github-users.eplus.dev">\n`;
+        markdown = markdown + `\t<img align="right" width="200" src="${outputMarkdownModel.locationDataModel.imageUrl}" alt="${country}"/>\n`;
         markdown = markdown + `</a>\n\n`;
         markdown = markdown + `The \`number of followers\` of users in ${country} on \`${formatMarkdown.getDate()}\`. `;
         markdown = markdown + `This list contains users from ${formatMarkdown.getLocations(outputMarkdownModel.locationDataModel)}.\n\n`;
@@ -15150,16 +15150,16 @@ let createIndexPage = (function () {
     let create = function (githubUsernameAndRepository, readConfigResponseModel) {
         let markdown = headerComponent.create();
         markdown = markdown + `<a href="https://top-github-users.eplus.dev">\n`;
-        markdown = markdown + `\t<img align="right" width="400" src="https://github.com/ePlus.DEV/top-github-users-monitor/raw/master/public/images/banner/top-github-users-map.png" alt="top-github-users-by-country">\n`;
+        markdown = markdown + `\t<img align="right" width="400" src="https://github.com/ePlus-DEV/top-github-users-action/raw/master/public/images/banner/top-github-users-map.png" alt="top-github-users-by-country"/>\n`;
         markdown = markdown + `</a>\n\n`;
         markdown = markdown + `List of most active GitHub users based on \`public contributions\` \`private contributions\` and \`number of followers\`  by country or state. `;
         markdown = markdown + `The list updated \`${formatMarkdown.getDate()}\`.\n\n`;
         markdown = markdown + `This repository contains users \`${readConfigResponseModel.locations.length} countries\` and \`${formatMarkdown.getNumberOfCities(readConfigResponseModel)} cities\`. \n`;
         markdown = markdown + `To get into the list you need to have minimum number of followers that varies in each country. `;
         markdown = markdown + `The list can be found in [config.json](https://github.com/${githubUsernameAndRepository}/blob/main/config.json).\n\n`;
-        markdown = markdown + `Contribute to GitHub action [ePlus.DEV/top-github-users-action](https://github.com/ePlus.DEV/top-github-users-action). `;
-        markdown = markdown + `The project maintained by [ePlus.DEV](https://github.com/ePlus.DEV). `
-        markdown = markdown + `Don't forget to follow him on [GitHub](https://github.com/ePlus.DEV), [Twitter](https://twitter.com/david_nguyen94), and [Website](https://eplus.dev/).\n\n`;
+        markdown = markdown + `Contribute to GitHub action [ePlus-DEV/top-github-users-action](https://github.com/ePlus-DEV/top-github-users-action). `;
+        markdown = markdown + `The project maintained by [ePlus-DEV](https://github.com/ePlus-DEV). `
+        markdown = markdown + `Don't forget to follow him on [GitHub](https://github.com/ePlus-DEV), [Twitter](https://twitter.com/david_nguyen94), and [Website](https://eplus.dev/).\n\n`;
         markdown = markdown + starComponent.create();
         markdown = markdown + `### 🚀 Share on\n\n`;
         markdown = markdown + socialMediaComponent.create(
@@ -15219,7 +15219,7 @@ let createPublicContributionsPage = (function () {
                     table = table + `\t\t<td>${index}</td>\n`;
                     table = table + `\t\t<td>\n`;
                     table = table + `\t\t\t<a href="https://github.com/${user.login}">\n`;
-                    table = table + `\t\t\t\t<img src="${user.avatarUrl}" width="24" alt="Avatar of ${user.login}"> ${user.login}\n`;
+                    table = table + `\t\t\t\t<img src="${user.avatarUrl}" width="24" alt="Avatar of ${user.login}"/> ${user.login}\n`;
                     table = table + `\t\t\t</a><br/>\n`;
                     table = table + `\t\t\t${formatMarkdown.getName(user.name)}\n`;
                     table = table + `\t\t</td>\n`;
@@ -15238,8 +15238,8 @@ let createPublicContributionsPage = (function () {
     let create = function (outputMarkdownModel) {
         let country = formatMarkdown.capitalizeTheFirstLetterOfEachWord(outputMarkdownModel.locationDataModel.country);
         let markdown = headerComponent.create(`Public Contributions`, country);
-        markdown = markdown + `<a href="https://gayanvoice.github.io/top-github-users/index.html">\n`;
-        markdown = markdown + `\t<img align="right" width="200" src="${outputMarkdownModel.locationDataModel.imageUrl}" alt="${country}">\n`;
+        markdown = markdown + `<a href="https://top-github-users.eplus.dev">\n`;
+        markdown = markdown + `\t<img align="right" width="200" src="${outputMarkdownModel.locationDataModel.imageUrl}" alt="${country}"/>\n`;
         markdown = markdown + `</a>\n\n`;
         markdown = markdown + `The \`public contributions\` by users in ${country} on \`${formatMarkdown.getDate()}\`. `;
         markdown = markdown + `This list contains users from ${formatMarkdown.getLocations(outputMarkdownModel.locationDataModel)}.\n\n`;
@@ -15307,7 +15307,7 @@ let createTotalContributionsPage = (function () {
                     table = table + `\t\t<td>${index}</td>\n`;
                     table = table + `\t\t<td>\n`;
                     table = table + `\t\t\t<a href="https://github.com/${user.login}">\n`;
-                    table = table + `\t\t\t\t<img src="${user.avatarUrl}" width="24" alt="Avatar of ${user.login}"> ${user.login}\n`;
+                    table = table + `\t\t\t\t<img src="${user.avatarUrl}" width="24" alt="Avatar of ${user.login}"/> ${user.login}\n`;
                     table = table + `\t\t\t</a><br/>\n`;
                     table = table + `\t\t\t${formatMarkdown.getName(user.name)}\n`;
                     table = table + `\t\t</td>\n`;
@@ -15327,8 +15327,8 @@ let createTotalContributionsPage = (function () {
     let create = function (outputMarkdownModel) {
         let country = formatMarkdown.capitalizeTheFirstLetterOfEachWord(outputMarkdownModel.locationDataModel.country);
         let markdown = headerComponent.create(`Total Contributions`, country);
-        markdown = markdown + `<a href="https://gayanvoice.github.io/top-github-users/index.html">\n`;
-        markdown = markdown + `\t<img align="right" width="200" src="${outputMarkdownModel.locationDataModel.imageUrl}" alt="${country}">\n`;
+        markdown = markdown + `<a href="https://top-github-users.eplus.dev">\n`;
+        markdown = markdown + `\t<img align="right" width="200" src="${outputMarkdownModel.locationDataModel.imageUrl}" alt="${country}"/>\n`;
         markdown = markdown + `</a>\n\n`;
         markdown = markdown + `The \`public contributions\` and \`private contributions\` by users in ${country} on \`${formatMarkdown.getDate()}\`. `;
         markdown = markdown + `This list contains users from ${formatMarkdown.getLocations(outputMarkdownModel.locationDataModel)}.\n\n`;
