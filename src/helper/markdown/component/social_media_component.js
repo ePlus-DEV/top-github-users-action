@@ -31,42 +31,42 @@ let socialMediaComponent = (function () {
             {
                 site: `WhatsApp`,
                 shareUrl: `https://web.whatsapp.com/${whatsAppPost}`,
-                iconUrl: `https://github.com/ePlus-DEV/top-github-users-action/blob/master/public/images/icons/whatsapp.svg`
+                iconUrl: `https://github.com/ePlus-DEV/top-github-users-action/raw/master/public/images/icons/whatsapp.svg`
             },
             {
                 site: `Telegram`,
                 shareUrl: `https://t.me/share/${telegramPost}`,
-                iconUrl: `https://github.com/ePlus-DEV/top-github-users-action/blob/master/public/images/icons/telegram.svg`
+                iconUrl: `https://github.com/ePlus-DEV/top-github-users-action/raw/master/public/images/icons/telegram.svg`
             },
             {
                 site: `LinkedIn`,
                 shareUrl: `https://www.linkedin.com/${linkedInPost}`,
-                iconUrl: `https://github.com/ePlus-DEV/top-github-users-action/blob/master/public/images/icons/linkedin.svg`
+                iconUrl: `https://github.com/ePlus-DEV/top-github-users-action/raw/master/public/images/icons/linkedin.svg`
             },
             {
                 site: `Vkontakte`,
                 shareUrl: `https://vk.com/${vkontaktePost}`,
-                iconUrl: `https://github.com/ePlus-DEV/top-github-users-action/blob/master/public/images/icons/vkontakte.svg`,
+                iconUrl: `https://github.com/ePlus-DEV/top-github-users-action/raw/master/public/images/icons/vkontakte.svg`,
             },
             {
                 site: `Blogger`,
                 shareUrl: `https://www.blogger.com/${bloggerPost}`,
-                iconUrl: `https://github.com/ePlus-DEV/top-github-users-action/blob/master/public/images/icons/blogger.svg`,
+                iconUrl: `https://github.com/ePlus-DEV/top-github-users-action/raw/master/public/images/icons/blogger.svg`,
             },
             {
                 site: `Wordpress`,
                 shareUrl: `https://wordpress.com/wp-admin/${wordpressPost}`,
-                iconUrl: `https://github.com/ePlus-DEV/top-github-users-action/blob/master/public/images/icons/wordpress.svg`,
+                iconUrl: `https://github.com/ePlus-DEV/top-github-users-action/raw/master/public/images/icons/wordpress.svg`,
             },
             {
                 site: `Email`,
                 shareUrl: `mailto:recipient ${email}`,
-                iconUrl: `https://github.com/ePlus-DEV/top-github-users-action/blob/master/public/images/icons/gmail.svg`
+                iconUrl: `https://github.com/ePlus-DEV/top-github-users-action/raw/master/public/images/icons/gmail.svg`
             },
             {
                 site: `Reddit`,
                 shareUrl: `https://www.reddit.com/${redditPost}`,
-                iconUrl: `https://github.com/ePlus-DEV/top-github-users-action/blob/master/public/images/icons/reddit.svg`,
+                iconUrl: `https://github.com/ePlus-DEV/top-github-users-action/raw/master/public/images/icons/reddit.svg`,
             }
         ];
         let table = `<table>\n`;
