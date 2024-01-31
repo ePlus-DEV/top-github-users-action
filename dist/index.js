@@ -14912,6 +14912,7 @@ let formatMarkdown = function () {
             return `No Name`;
         } else {
             name = name.replace(/[\n\r]/g, '');
+            name = name.replace('<>', '-');
             return name
         }
     }
@@ -14934,6 +14935,7 @@ let formatMarkdown = function () {
         }
         placesString = placesString.replace('<3', '');
         placesString = placesString.replace(/[\n\r]/g, '');
+        placesString = placesString.replace('<>', '-');
         return placesString
     }
     let getMinimumFollowersRequirement = function (readCacheResponseModel) {
