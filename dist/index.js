@@ -14982,15 +14982,15 @@ let outputMarkdown = (function () {
     }
     let setPublicContributionsPath = function (country) {
         let fileName = setCountryName(country)
-        return `markdown/public_contributions/${fileName}.md`;
+        return `docs/public_contributions/${fileName}.md`;
     }
     let setTotalContributionsPath = function (country) {
         let fileName = setCountryName(country)
-        return `markdown/total_contributions/${fileName}.md`;
+        return `docs/total_contributions/${fileName}.md`;
     }
     let setFollowersPath = function (country) {
         let fileName = setCountryName(country)
-        return `markdown/followers/${fileName}.md`;
+        return `docs/followers/${fileName}.md`;
     }
     let saveIndexMarkdownFile = async function (markdown) {
         await markdownFile.outputMarkdownFile(setIndexPath(), markdown);
