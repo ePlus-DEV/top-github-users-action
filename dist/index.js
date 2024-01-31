@@ -14930,6 +14930,7 @@ let formatMarkdown = function () {
                 placesString = placesString + ` \`${capitalizeTheFirstLetterOfEachWord(location)}\``
             }
         }
+        placesString = placesString.replace('<3', '');
         return placesString
     }
     let getMinimumFollowersRequirement = function (readCacheResponseModel) {
