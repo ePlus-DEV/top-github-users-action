@@ -14903,6 +14903,7 @@ let formatMarkdown = function () {
             return `No Company`;
         } else {
             company = company.replace(/[^@a-zA-Z0-9\s]/g, '');
+            company = company.replace(/[\n\r]/g, '');
             return breakWords(company, 4);
         }
     }
@@ -14910,6 +14911,7 @@ let formatMarkdown = function () {
         if(name === 'undefined value'){
             return `No Name`;
         } else {
+            name = name.replace(/[\n\r]/g, '');
             return name
         }
     }
@@ -14931,6 +14933,7 @@ let formatMarkdown = function () {
             }
         }
         placesString = placesString.replace('<3', '');
+        placesString = placesString.replace(/[\n\r]/g, '');
         return placesString
     }
     let getMinimumFollowersRequirement = function (readCacheResponseModel) {
