@@ -14929,7 +14929,7 @@ let formatMarkdown = function () {
         if(twitterUsername === 'undefined value'){
             return `No Twitter Username`;
         } else {
-            return `<a href="https://twitter.com/${twitterUsername}">${twitterUsername}</a>`
+            return `<a target="_blank" href="https://twitter.com/${twitterUsername}">${twitterUsername}</a>`
         }
     }
     let getLocations = function (locationDataModel) {
@@ -15070,7 +15070,7 @@ let createFollowersPage = (function () {
                     table = table + `\t<tr>\n`;
                     table = table + `\t\t<td>${index}</td>\n`;
                     table = table + `\t\t<td>\n`;
-                    table = table + `\t\t\t<a href="https://github.com/${user.login}">\n`;
+                    table = table + `\t\t\t<a target="_blank" href="https://github.com/${user.login}">\n`;
                     table = table + `\t\t\t\t<img src="${user.avatarUrl}" width="24" alt="Avatar of ${user.login}"/> ${user.login}\n`;
                     table = table + `\t\t\t</a><br/>\n`;
                     table = table + `\t\t\t${formatMarkdown.getName(user.name)}\n`;
@@ -15241,7 +15241,7 @@ let createPublicContributionsPage = (function () {
                     table = table + `\t<tr>\n`;
                     table = table + `\t\t<td>${index}</td>\n`;
                     table = table + `\t\t<td>\n`;
-                    table = table + `\t\t\t<a href="https://github.com/${user.login}">\n`;
+                    table = table + `\t\t\t<a target="_blank" href="https://github.com/${user.login}">\n`;
                     table = table + `\t\t\t\t<img src="${user.avatarUrl}" width="24" alt="Avatar of ${user.login}"/> ${user.login}\n`;
                     table = table + `\t\t\t</a><br/>\n`;
                     table = table + `\t\t\t${formatMarkdown.getName(user.name)}\n`;
@@ -15329,7 +15329,7 @@ let createTotalContributionsPage = (function () {
                     table = table + `\t<tr>\n`;
                     table = table + `\t\t<td>${index}</td>\n`;
                     table = table + `\t\t<td>\n`;
-                    table = table + `\t\t\t<a href="https://github.com/${user.login}">\n`;
+                    table = table + `\t\t\t<a target="_blank" href="https://github.com/${user.login}">\n`;
                     table = table + `\t\t\t\t<img src="${user.avatarUrl}" width="24" alt="Avatar of ${user.login}"/> ${user.login}\n`;
                     table = table + `\t\t\t</a><br/>\n`;
                     table = table + `\t\t\t${formatMarkdown.getName(user.name)}\n`;
@@ -15366,13 +15366,13 @@ let createTotalContributionsPage = (function () {
         markdown = markdown + socialMediaComponent.create(
             `Top GitHub Users By Total Contributions in ${country}`,
             "List of most active github users based on total contributions by country",
-            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/docs/total_contributions/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
+            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/docs/total-contributions/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
         markdown = markdown + createUserTableByPublicContributions(outputMarkdownModel.readCacheResponseModel);
         markdown = markdown + `### 🚀 Share on\n\n`;
         markdown = markdown + socialMediaComponent.create(
             `Top GitHub Users By Total Contributions in ${country}`,
             `List of most active github users based on total contributions by country`,
-            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/docs/total_contributions/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
+            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/docs/total-contributions/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
         markdown = markdown + thirdPartyComponent.create();
         markdown = markdown + licenseComponent.create(outputMarkdownModel.githubUsernameAndRepository);
         return markdown;

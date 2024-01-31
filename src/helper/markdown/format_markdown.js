@@ -56,7 +56,7 @@ let formatMarkdown = function () {
         if(twitterUsername === 'undefined value'){
             return `No Twitter Username`;
         } else {
-            return `<a href="https://twitter.com/${twitterUsername}">${twitterUsername}</a>`
+            return `<a target="_blank" href="https://twitter.com/${twitterUsername}">${twitterUsername}</a>`
         }
     }
     let getLocations = function (locationDataModel) {
