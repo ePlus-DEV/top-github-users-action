@@ -46,6 +46,12 @@ let formatMarkdown = function () {
             return name
         }
     }
+    let getLocationName = function (name) {
+        name = name.replace(/[^@a-zA-Z0-9\s]/g, '');
+        name = name.replace(/[\n\r]/g, '');
+        name = name.replace('<>', '-');
+        return name
+    }
     let getTwitterUsername = function (twitterUsername) {
         if(twitterUsername === 'undefined value'){
             return `No Twitter Username`;
@@ -96,6 +102,7 @@ let formatMarkdown = function () {
         getName: getName,
         getTwitterUsername: getTwitterUsername,
         getLocations: getLocations,
+        getLocationName: getLocationName,
         getMinimumFollowersRequirement: getMinimumFollowersRequirement,
         getCountryName: getCountryName,
         getNumberOfCities: getNumberOfCities

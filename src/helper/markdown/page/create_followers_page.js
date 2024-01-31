@@ -34,7 +34,7 @@ let createFollowersPage = (function () {
                     table = table + `\t\t</td>\n`;
                     table = table + `\t\t<td>${formatMarkdown.getCompany(user.company)}</td>\n`;
                     table = table + `\t\t<td>${formatMarkdown.getTwitterUsername(user.twitterUsername)}</td>\n`;
-                    table = table + `\t\t<td>${user.location}</td>\n`;
+                    table = table + `\t\t<td>${formatMarkdown.getLocationName(user.location)}</td>\n`;
                     table = table + `\t\t<td>${user.followers}</td>\n`;
                     table = table + `\t</tr>\n`;
                 }
