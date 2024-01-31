@@ -14626,7 +14626,8 @@ let headerComponent = function () {
         let markdown = ``;
         if (pageTitle === undefined && country === undefined) {
             markdown = markdown + `---\n`;
-            markdown = markdown + `title: Top GitHub Users By Country\n`;
+            markdown = markdown + `sidebar_position: 1\n`;
+            markdown = markdown + `slug: /\n`;
             markdown = markdown + `---\n\n`;
             markdown = markdown + `# Top GitHub Users By Country `;
             markdown = markdown + `[<img alt="Image of insights" src="https://github.com/ePlus-DEV/view-counter/blob/main/graph/749591754/small/week.png" height="24"/>](https://github.com/ePlus-DEV/view-counter/blob/master/readme/749591754/week.md)\n`
@@ -14634,7 +14635,8 @@ let headerComponent = function () {
             markdown = markdown + `[![Image of insights](https://github.com/ePlus-DEV/view-counter/blob/main/svg/749591754/badge.svg)](https://github.com/ePlus-DEV/view-counter/blob/master/readme/749591754/week.md)\n\n`;
         } else {
             markdown = markdown + `---\n`;
-            markdown = markdown + `title: Top GitHub Users By ${pageTitle} in ${country} \n`;
+            markdown = markdown + `title: ${country} \n`;
+            markdown = markdown + `description: Top GitHub Users By ${pageTitle} in ${country} \n`;
             markdown = markdown + `---\n\n`;
             markdown = markdown + `# Top GitHub Users By ${pageTitle} in ${country} `;
             markdown = markdown + `[<img alt="Image of insights" src="https://github.com/ePlus-DEV/view-counter/blob/main/graph/749591754/small/week.png" height="24"/>](https://github.com/ePlus-DEV/view-counter/blob/master/readme/749591754/week.md)\n`
