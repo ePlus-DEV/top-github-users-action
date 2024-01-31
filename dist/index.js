@@ -14626,6 +14626,7 @@ let headerComponent = function () {
         let markdown = ``;
         if (pageTitle === undefined && country === undefined) {
             markdown = markdown + `---\n`;
+            markdown = markdown + `title: Homepage\n`;
             markdown = markdown + `sidebar_position: 1\n`;
             markdown = markdown + `slug: /\n`;
             markdown = markdown + `---\n\n`;
