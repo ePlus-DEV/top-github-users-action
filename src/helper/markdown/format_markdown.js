@@ -31,6 +31,7 @@ let formatMarkdown = function () {
         if(company === 'undefined value'){
             return `No Company`;
         } else {
+            company = company.replace(/[{}]/g, '');
             return breakWords(company, 4)
         }
     }
