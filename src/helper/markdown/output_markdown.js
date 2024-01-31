@@ -10,11 +10,11 @@ let outputMarkdown = (function () {
     }
     let setPublicContributionsPath = function (country) {
         let fileName = setCountryName(country)
-        return `docs/public_contributions/${fileName}.md`;
+        return `docs/public-contributions/${fileName}.md`;
     }
     let setTotalContributionsPath = function (country) {
         let fileName = setCountryName(country)
-        return `docs/total_contributions/${fileName}.md`;
+        return `docs/total-contributions/${fileName}.md`;
     }
     let setFollowersPath = function (country) {
         let fileName = setCountryName(country)

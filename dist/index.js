@@ -14679,8 +14679,8 @@ module.exports = licenseComponent;
 const formatMarkdown = __nccwpck_require__(3164);
 let shortcutMenuComponent = function () {
     let create = function (indexUrl, country, index) {
-        let publicContributionsUrl  = `${indexUrl}/blob/main/docs/public_contributions/${formatMarkdown.getCountryName(country)}.md`;
-        let totalContributionsUrl  = `${indexUrl}/blob/main/docs/total_contributions/${formatMarkdown.getCountryName(country)}.md`;
+        let publicContributionsUrl  = `${indexUrl}/blob/main/docs/public-contributions/${formatMarkdown.getCountryName(country)}.md`;
+        let totalContributionsUrl  = `${indexUrl}/blob/main/docs/total-contributions/${formatMarkdown.getCountryName(country)}.md`;
         let followersUrl  = `${indexUrl}/blob/main/docs/followers/${formatMarkdown.getCountryName(country)}.md`;
         let table = `<table>\n`;
         table = table + `\t<tr>\n`;
@@ -15002,11 +15002,11 @@ let outputMarkdown = (function () {
     }
     let setPublicContributionsPath = function (country) {
         let fileName = setCountryName(country)
-        return `docs/public_contributions/${fileName}.md`;
+        return `docs/public-contributions/${fileName}.md`;
     }
     let setTotalContributionsPath = function (country) {
         let fileName = setCountryName(country)
-        return `docs/total_contributions/${fileName}.md`;
+        return `docs/total-contributions/${fileName}.md`;
     }
     let setFollowersPath = function (country) {
         let fileName = setCountryName(country)
@@ -15158,7 +15158,7 @@ let createIndexPage = (function () {
         for(const locationDataModel of readConfigResponseModel.locations) {
             table = table + `\t<tr>\n`;
             table = table + `\t\t<td>\n`;
-            table = table + `\t\t\t<a href="${indexUrl}/blob/main/docs/public_contributions/${formatMarkdown.getCountryName(locationDataModel.country)}.md">\n`;
+            table = table + `\t\t\t<a href="${indexUrl}/blob/main/docs/public-contributions/${formatMarkdown.getCountryName(locationDataModel.country)}.md">\n`;
             table = table + `\t\t\t\t${formatMarkdown.capitalizeTheFirstLetterOfEachWord(locationDataModel.country)}\n`;
             table = table + `\t\t\t</a>\n`;
             table = table + `\t\t</td>\n`;
@@ -15277,13 +15277,13 @@ let createPublicContributionsPage = (function () {
         markdown = markdown + socialMediaComponent.create(
             `Top GitHub Users By Public Contributions in ${country}`,
             "List of most active github users based on public contributions by country",
-            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/docs/public_contributions/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
+            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/docs/public-contributions/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
         markdown = markdown + createUserTableByPublicContributions(outputMarkdownModel.readCacheResponseModel);
         markdown = markdown + `### 🚀 Share on\n\n`;
         markdown = markdown + socialMediaComponent.create(
             `Top GitHub Users By Public Contributions in ${country}`,
             `List of most active github users based on public contributions by country`,
-            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/docs/public_contributions/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
+            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/docs/public-contributions/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
         markdown = markdown + thirdPartyComponent.create();
         markdown = markdown + licenseComponent.create(outputMarkdownModel.githubUsernameAndRepository);
         return markdown;
