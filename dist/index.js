@@ -14937,6 +14937,7 @@ let formatMarkdown = function () {
                 placesString = placesString + ` \`${capitalizeTheFirstLetterOfEachWord(location)}\``
             }
         }
+        placesString = placesString.replace(/[^a-zA-Z0-9\s]/g, '');
         placesString = placesString.replace('<3', '');
         placesString = placesString.replace(/[\n\r]/g, '');
         placesString = placesString.replace('<>', '-');
