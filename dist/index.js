@@ -14899,11 +14899,12 @@ let formatMarkdown = function () {
         return `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()} ${time} UTC`
     }
     let getCompany = function (company) {
-        if(company === 'undefined value'){
+        if (company === 'undefined value') {
             return `No Company`;
         } else {
             company = company.replace(/[{}]/g, '');
-            return breakWords(company, 4)
+            company = company.replace(/<[^>]*>/g, '');
+            return breakWords(company, 4);
         }
     }
     let getName = function (name) {
