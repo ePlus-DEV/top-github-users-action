@@ -1,3 +1,5 @@
+const fs = require('fs-extra');
+const path = require('path');
 const markdownFile = require('../../helper/file/markdown_file');
 let outputMarkdown = (function () {
     let setCountryName = function (country) {
@@ -19,7 +21,10 @@ let outputMarkdown = (function () {
         return `docs/followers/${fileName}.md`;
     }
     let saveIndexMarkdownFile = async function (markdown) {
-        await markdownFile.outputMarkdownFile(setIndexPath(), markdown);
+        let indexPath = setIndexPath();
+        await markdownFile.outputMarkdownFile(indexPath, markdown);
+        let docsPath = path.join('docs', indexPath);
+        await fs.copy(indexPath, docsPath);
     }
     let savePublicContributionsMarkdownFile = async function (country, markdown) {
         await markdownFile.outputMarkdownFile(setPublicContributionsPath(country), markdown);

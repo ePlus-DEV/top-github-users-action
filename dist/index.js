@@ -14972,6 +14972,8 @@ module.exports = formatMarkdown;
 /***/ 8167:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
+const fs = __nccwpck_require__(5630);
+const path = __nccwpck_require__(1017);
 const markdownFile = __nccwpck_require__(2025);
 let outputMarkdown = (function () {
     let setCountryName = function (country) {
@@ -14993,7 +14995,10 @@ let outputMarkdown = (function () {
         return `docs/followers/${fileName}.md`;
     }
     let saveIndexMarkdownFile = async function (markdown) {
-        await markdownFile.outputMarkdownFile(setIndexPath(), markdown);
+        let indexPath = setIndexPath();
+        await markdownFile.outputMarkdownFile(indexPath, markdown);
+        let docsPath = path.join('docs', indexPath);
+        await fs.copy(indexPath, docsPath);
     }
     let savePublicContributionsMarkdownFile = async function (country, markdown) {
         await markdownFile.outputMarkdownFile(setPublicContributionsPath(country), markdown);
