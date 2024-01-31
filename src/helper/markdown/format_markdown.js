@@ -48,6 +48,9 @@ let formatMarkdown = function () {
         if(twitterUsername === 'undefined value'){
             return `No Twitter Username`;
         } else {
+            twitterUsername = twitterUsername.replace(/[{}]/g, '');
+            twitterUsername = twitterUsername.replace(/<[^>]*>/g, '');
+            twitterUsername = twitterUsername.replace(/[^\w\s]/gi, ''); // Remove special characters
             return `<a href="https://twitter.com/${twitterUsername}">${twitterUsername}</a>`
         }
     }
