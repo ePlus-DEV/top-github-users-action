@@ -63,13 +63,13 @@ let createFollowersPage = (function () {
         markdown = markdown + socialMediaComponent.create(
             `Top GitHub Users By Followers in ${country}`,
             "Most active github users based on number of followers by country",
-            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/markdown/followers/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
+            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/docs/followers/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
         markdown = markdown + createUserTableByPublicContributions(outputMarkdownModel.readCacheResponseModel);
         markdown = markdown + `### 🚀 Share on\n\n`;
         markdown = markdown + socialMediaComponent.create(
             `Top GitHub Users By Followers in ${country}`,
             `List of most active github users based on number of followers by country`,
-            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/markdown/followers/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
+            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/docs/followers/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
         markdown = markdown + thirdPartyComponent.create();
         markdown = markdown + licenseComponent.create(outputMarkdownModel.githubUsernameAndRepository);
         return markdown;

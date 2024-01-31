@@ -28,7 +28,7 @@ let createIndexPage = (function () {
         for(const locationDataModel of readConfigResponseModel.locations) {
             table = table + `\t<tr>\n`;
             table = table + `\t\t<td>\n`;
-            table = table + `\t\t\t<a href="${indexUrl}/blob/main/markdown/public_contributions/${formatMarkdown.getCountryName(locationDataModel.country)}.md">\n`;
+            table = table + `\t\t\t<a href="${indexUrl}/blob/main/docs/public_contributions/${formatMarkdown.getCountryName(locationDataModel.country)}.md">\n`;
             table = table + `\t\t\t\t${formatMarkdown.capitalizeTheFirstLetterOfEachWord(locationDataModel.country)}\n`;
             table = table + `\t\t\t</a>\n`;
             table = table + `\t\t</td>\n`;

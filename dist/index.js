@@ -14598,10 +14598,10 @@ let outputHtml = (function () {
     const HTML_FILE = "index.html";
     const RANKING_FILE = "ranking.json"
     let setHtmlFilePath = function () {
-        return `docs/${HTML_FILE}`;
+        return `src/pages/${HTML_FILE}`;
     }
     let setRankingJsonFilePath = function () {
-        return `docs/${RANKING_FILE}`;
+        return `src/pages/${RANKING_FILE}`;
     }
     let saveHtmlFile = async function (html) {
         await htmlFile.outputHtmlFile(setHtmlFilePath(), html);
@@ -14677,9 +14677,9 @@ module.exports = licenseComponent;
 const formatMarkdown = __nccwpck_require__(3164);
 let shortcutMenuComponent = function () {
     let create = function (indexUrl, country, index) {
-        let publicContributionsUrl  = `${indexUrl}/blob/main/markdown/public_contributions/${formatMarkdown.getCountryName(country)}.md`;
-        let totalContributionsUrl  = `${indexUrl}/blob/main/markdown/total_contributions/${formatMarkdown.getCountryName(country)}.md`;
-        let followersUrl  = `${indexUrl}/blob/main/markdown/followers/${formatMarkdown.getCountryName(country)}.md`;
+        let publicContributionsUrl  = `${indexUrl}/blob/main/docs/public_contributions/${formatMarkdown.getCountryName(country)}.md`;
+        let totalContributionsUrl  = `${indexUrl}/blob/main/docs/total_contributions/${formatMarkdown.getCountryName(country)}.md`;
+        let followersUrl  = `${indexUrl}/blob/main/docs/followers/${formatMarkdown.getCountryName(country)}.md`;
         let table = `<table>\n`;
         table = table + `\t<tr>\n`;
         if(index === 0){
@@ -15083,13 +15083,13 @@ let createFollowersPage = (function () {
         markdown = markdown + socialMediaComponent.create(
             `Top GitHub Users By Followers in ${country}`,
             "Most active github users based on number of followers by country",
-            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/markdown/followers/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
+            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/docs/followers/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
         markdown = markdown + createUserTableByPublicContributions(outputMarkdownModel.readCacheResponseModel);
         markdown = markdown + `### 🚀 Share on\n\n`;
         markdown = markdown + socialMediaComponent.create(
             `Top GitHub Users By Followers in ${country}`,
             `List of most active github users based on number of followers by country`,
-            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/markdown/followers/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
+            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/docs/followers/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
         markdown = markdown + thirdPartyComponent.create();
         markdown = markdown + licenseComponent.create(outputMarkdownModel.githubUsernameAndRepository);
         return markdown;
@@ -15135,7 +15135,7 @@ let createIndexPage = (function () {
         for(const locationDataModel of readConfigResponseModel.locations) {
             table = table + `\t<tr>\n`;
             table = table + `\t\t<td>\n`;
-            table = table + `\t\t\t<a href="${indexUrl}/blob/main/markdown/public_contributions/${formatMarkdown.getCountryName(locationDataModel.country)}.md">\n`;
+            table = table + `\t\t\t<a href="${indexUrl}/blob/main/docs/public_contributions/${formatMarkdown.getCountryName(locationDataModel.country)}.md">\n`;
             table = table + `\t\t\t\t${formatMarkdown.capitalizeTheFirstLetterOfEachWord(locationDataModel.country)}\n`;
             table = table + `\t\t\t</a>\n`;
             table = table + `\t\t</td>\n`;
@@ -15254,13 +15254,13 @@ let createPublicContributionsPage = (function () {
         markdown = markdown + socialMediaComponent.create(
             `Top GitHub Users By Public Contributions in ${country}`,
             "List of most active github users based on public contributions by country",
-            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/markdown/public_contributions/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
+            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/docs/public_contributions/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
         markdown = markdown + createUserTableByPublicContributions(outputMarkdownModel.readCacheResponseModel);
         markdown = markdown + `### 🚀 Share on\n\n`;
         markdown = markdown + socialMediaComponent.create(
             `Top GitHub Users By Public Contributions in ${country}`,
             `List of most active github users based on public contributions by country`,
-            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/markdown/public_contributions/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
+            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/docs/public_contributions/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
         markdown = markdown + thirdPartyComponent.create();
         markdown = markdown + licenseComponent.create(outputMarkdownModel.githubUsernameAndRepository);
         return markdown;
@@ -15343,13 +15343,13 @@ let createTotalContributionsPage = (function () {
         markdown = markdown + socialMediaComponent.create(
             `Top GitHub Users By Total Contributions in ${country}`,
             "List of most active github users based on total contributions by country",
-            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/markdown/total_contributions/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
+            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/docs/total_contributions/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
         markdown = markdown + createUserTableByPublicContributions(outputMarkdownModel.readCacheResponseModel);
         markdown = markdown + `### 🚀 Share on\n\n`;
         markdown = markdown + socialMediaComponent.create(
             `Top GitHub Users By Total Contributions in ${country}`,
             `List of most active github users based on total contributions by country`,
-            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/markdown/total_contributions/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
+            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/docs/total_contributions/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
         markdown = markdown + thirdPartyComponent.create();
         markdown = markdown + licenseComponent.create(outputMarkdownModel.githubUsernameAndRepository);
         return markdown;

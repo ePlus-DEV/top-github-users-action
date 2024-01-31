@@ -65,13 +65,13 @@ let createTotalContributionsPage = (function () {
         markdown = markdown + socialMediaComponent.create(
             `Top GitHub Users By Total Contributions in ${country}`,
             "List of most active github users based on total contributions by country",
-            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/markdown/total_contributions/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
+            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/docs/total_contributions/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
         markdown = markdown + createUserTableByPublicContributions(outputMarkdownModel.readCacheResponseModel);
         markdown = markdown + `### 🚀 Share on\n\n`;
         markdown = markdown + socialMediaComponent.create(
             `Top GitHub Users By Total Contributions in ${country}`,
             `List of most active github users based on total contributions by country`,
-            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/markdown/total_contributions/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
+            `https://github.com/${outputMarkdownModel.githubUsernameAndRepository}/blob/main/docs/total_contributions/${formatMarkdown.getCountryName(outputMarkdownModel.locationDataModel.country)}.md`);
         markdown = markdown + thirdPartyComponent.create();
         markdown = markdown + licenseComponent.create(outputMarkdownModel.githubUsernameAndRepository);
         return markdown;

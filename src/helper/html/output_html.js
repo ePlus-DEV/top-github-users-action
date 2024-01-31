@@ -3,10 +3,10 @@ let outputHtml = (function () {
     const HTML_FILE = "index.html";
     const RANKING_FILE = "ranking.json"
     let setHtmlFilePath = function () {
-        return `docs/${HTML_FILE}`;
+        return `src/pages/${HTML_FILE}`;
     }
     let setRankingJsonFilePath = function () {
-        return `docs/${RANKING_FILE}`;
+        return `src/pages/${RANKING_FILE}`;
     }
     let saveHtmlFile = async function (html) {
         await htmlFile.outputHtmlFile(setHtmlFilePath(), html);

@@ -1,9 +1,9 @@
 const formatMarkdown = require('../format_markdown');
 let shortcutMenuComponent = function () {
     let create = function (indexUrl, country, index) {
-        let publicContributionsUrl  = `${indexUrl}/blob/main/markdown/public_contributions/${formatMarkdown.getCountryName(country)}.md`;
-        let totalContributionsUrl  = `${indexUrl}/blob/main/markdown/total_contributions/${formatMarkdown.getCountryName(country)}.md`;
-        let followersUrl  = `${indexUrl}/blob/main/markdown/followers/${formatMarkdown.getCountryName(country)}.md`;
+        let publicContributionsUrl  = `${indexUrl}/blob/main/docs/public_contributions/${formatMarkdown.getCountryName(country)}.md`;
+        let totalContributionsUrl  = `${indexUrl}/blob/main/docs/total_contributions/${formatMarkdown.getCountryName(country)}.md`;
+        let followersUrl  = `${indexUrl}/blob/main/docs/followers/${formatMarkdown.getCountryName(country)}.md`;
         let table = `<table>\n`;
         table = table + `\t<tr>\n`;
         if(index === 0){
